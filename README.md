@@ -58,9 +58,14 @@ EOF
 helm repo add prometheus-community https://prometheus-community.github.io/helm-charts
 ```
 
-```helm repo update```
+```
+helm repo update
+```
 
-```helm install --wait --timeout 15m --namespace monitoring --create-namespace --repo http://prometheus-community.github.io./helm-charts prom kube-prometheus-stack --values prometheus-value.yaml ```
+```
+helm install --wait --timeout 15m --namespace monitoring --create-namespace --repo http://prometheus-community.github.io./helm-charts prom kube-prometheus-stack --values prometheus-value.yaml 
+
+```
 #### Trivy-Operator 
 ```helm install trivy-operator aqua/trivy-operator \
   --namespace trivy-op \
